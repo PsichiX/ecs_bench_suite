@@ -1,14 +1,6 @@
 # ECS Bench Suite
 
-A suite of benchmarks designed to test and compare Rust ECS library performance across a variety of challenging circumstances.
-
-The full benchmark report is available [here](https://rust-gamedev.github.io/ecs_bench_suite/target/criterion/report/index.html).
-
-## Status
-
-The project is now archived - see discussion [here](https://github.com/rust-gamedev/wg/issues/130); summary:
-
-> [The project] arguably went quite well even though it’s not that actively updated; I like to think we collectively realized that speed is only one aspect of an ECS, and a rather small one at that once a baseline of performance has been established.
+Forked from [ecs_bench_suite](https://github.com/rust-gamedev/ecs_bench_suite), adding [ETS](https://github.com/jagprog5/ets).
 
 ## The Benchmarks
 

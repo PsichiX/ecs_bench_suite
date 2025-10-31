@@ -1,6 +1,11 @@
 #![allow(clippy::new_without_default)]
+// required by ets
+#![allow(incomplete_features)]
+#![feature(specialization)]
+
 
 pub mod bevy;
+pub mod ets;
 pub mod hecs;
 pub mod legion;
 pub mod legion_packed;
