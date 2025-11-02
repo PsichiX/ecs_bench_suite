@@ -19,6 +19,7 @@ impl Benchmark {
 
     pub fn run(&mut self) {
         let mut world = MyWorld::default();
+        world.arena_mut::<MyData>().reserve(10000);
         for _ in 0..10_000 {
             world.my_data.insert(MyData {
                 transform: Matrix4::from_scale(1.0),
