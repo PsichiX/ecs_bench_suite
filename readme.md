@@ -82,7 +82,7 @@ Test: Iterate through all entities, adding a `B` component. Then iterate through
 
 ![Add + remove component](./report/add_remove_component.png)
 
-### Serialize
+<!-- ### Serialize
 
 This benchmark is designed to test how quickly the ECS and serialize and deserialize its entities in both text (RON) and binary (bincode) formats.
 
@@ -91,4 +91,4 @@ Dataset: 1000 entities with `Transform(mat4x4)`, `Position(vec3)`, `Rotation(vec
 Test: Serialize all entities to RON and bincode formats in-memory. Then deserialize back into the ECS. The RON and bincode formats should be separate benchmark tests.
 
 ![Serialize text](./report/serialize_text.png)
-![Serialize bytes](./report/serialize_binary.png)
+![Serialize bytes](./report/serialize_binary.png) -->

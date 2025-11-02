@@ -32,8 +32,8 @@ build-readme-images:
     resvg ./target/criterion/schedule/report/violin.svg ./report/schedule.png --background white
     resvg ./target/criterion/heavy_compute/report/violin.svg ./report/heavy_compute.png --background white
     resvg ./target/criterion/add_remove_component/report/violin.svg ./report/add_remove_component.png --background white
-    resvg ./target/criterion/serialize_text/report/violin.svg ./report/serialize_text.png --background white
-    resvg ./target/criterion/serialize_binary/report/violin.svg ./report/serialize_binary.png --background white
+    # resvg ./target/criterion/serialize_text/report/violin.svg ./report/serialize_text.png --background white
+    # resvg ./target/criterion/serialize_binary/report/violin.svg ./report/serialize_binary.png --background white
 
 # Ensures everything works before publishing changes to branch
 checks:
@@ -41,4 +41,4 @@ checks:
     just clippy
     just build
     just test
-    # just bench
+    just bench
