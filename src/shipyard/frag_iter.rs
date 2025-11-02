@@ -3,6 +3,7 @@ use shipyard::*;
 macro_rules! create_entities {
     ($world:ident; $( $variants:ident ),*) => {
         $(
+            #[derive(Component, Copy, Clone)]
             struct $variants(f32);
             $world.run(
                 | mut entities: EntitiesViewMut,
@@ -14,11 +15,12 @@ macro_rules! create_entities {
                         ($variants(0.0), Data(1.0)),
                     );
                 }
-            }).unwrap();
+            });
         )*
     };
 }
 
+#[derive(Component, Copy, Clone)]
 struct Data(f32);
 
 pub struct Benchmark(World);
@@ -33,13 +35,11 @@ impl Benchmark {
     }
 
     pub fn run(&mut self) {
-        self.0
-            .run(|mut data: ViewMut<Data>| {
-                (&mut data).iter().for_each(|mut data| {
-                    data.0 *= 2.0;
-                })
+        self.0.run(|mut data: ViewMut<Data>| {
+            (&mut data).iter().for_each(|data| {
+                data.0 *= 2.0;
             })
-            .unwrap();
+        });
     }
 }
 
