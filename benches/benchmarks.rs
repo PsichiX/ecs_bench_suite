@@ -243,10 +243,10 @@ fn bench_serialize_text(c: &mut Criterion) {
         let mut bench = legion::serialize_text::Benchmark::new();
         b.iter(move || bench.run());
     });
-    group.bench_function("hecs", |b| {
-        let mut bench = hecs::serialize_text::Benchmark::new();
-        b.iter(move || bench.run());
-    });
+    // group.bench_function("hecs", |b| {
+    //     let mut bench = hecs::serialize_text::Benchmark::new();
+    //     b.iter(move || bench.run());
+    // });
     // group.bench_function("bevy", |b| {
     //     let mut bench = bevy::serialize_text::Benchmark::new();
     //     b.iter(move || bench.run());
@@ -263,10 +263,10 @@ fn bench_serialize_binary(c: &mut Criterion) {
         let mut bench = legion::serialize_binary::Benchmark::new();
         b.iter(move || bench.run());
     });
-    group.bench_function("hecs", |b| {
-        let mut bench = hecs::serialize_binary::Benchmark::new();
-        b.iter(move || bench.run());
-    });
+    // group.bench_function("hecs", |b| {
+    //     let mut bench = hecs::serialize_binary::Benchmark::new();
+    //     b.iter(move || bench.run());
+    // });
     // group.bench_function("bevy", |b| {
     //     let mut bench = bevy::serialize_text::Benchmark::new();
     //     b.iter(move || bench.run());

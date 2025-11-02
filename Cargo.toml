@@ -11,7 +11,7 @@ edition = "2024"
 anput = "0.21"
 bevy_ecs = "0.17"
 entity-trait-system = { version = "1.1", features = ["rayon", "serde"] }
-hecs = { version = "0.5", features = ["column-serialize", "row-serialize"] }
+hecs = { version = "0.10", features = ["column-serialize", "row-serialize"] }
 legion = "0.3"
 planck_ecs = { version = "1.1", features = ["parallel"] }
 shipyard = "0.5"
