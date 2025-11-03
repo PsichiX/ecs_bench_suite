@@ -17,6 +17,10 @@ build:
 test:
     cargo test --all
 
+# Update dependencies
+update:
+    cargo update
+
 # Runs benchmarks and generates report
 bench: 
     mkdir -p ./report
